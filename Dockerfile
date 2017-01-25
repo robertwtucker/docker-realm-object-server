@@ -1,5 +1,4 @@
 FROM buildpack-deps:xenial-curl
-MAINTAINER Robert Tucker <robertwtucker@gmail.com>
 
 # Install & setup Realm's PackageCloud repository
 RUN set -x \
