@@ -5,7 +5,8 @@ Docker container for the Realm Object Server (Developer Edition) -- part of the 
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`1.0.3-231`, `latest` (*Dockerfile*)](https://github.com/robertwtucker/docker-realm-object-server/blob/master/Dockerfile)
+* [`1.1.0-257`, `latest` (*Dockerfile*)](https://github.com/robertwtucker/docker-realm-object-server/blob/master/Dockerfile)
+* [`1.0.3-231`, (*Dockerfile*)](https://github.com/robertwtucker/docker-realm-object-server/blob/1.0.3-231/Dockerfile)
 * [`1.0.2-205` (*Dockerfile*)](https://github.com/robertwtucker/docker-realm-object-server/blob/1.0.2-205/Dockerfile)
 * [`1.0.0-164` (*Dockerfile*)](https://github.com/robertwtucker/docker-realm-object-server/blob/1.0.0-164/Dockerfile)
 
