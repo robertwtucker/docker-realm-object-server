@@ -12,7 +12,7 @@ RUN set -x \
       echo "deb-src https://packagecloud.io/realm/realm/ubuntu/ xenial main"; \
     } > /etc/apt/sources.list.d/realm_realm.list
 
-ENV REALM_VERSION 1.8.2-310
+ENV REALM_VERSION 1.8.3-83
 
 # Update the repository and install Realm
 RUN set -x \
