@@ -54,22 +54,22 @@ For any use beyond a simple test installation, it is highly recommended that the
 
 1. Create a directory on the host that contains the ```configuration.yml``` and key files. For this example, we'll use a directory named ```config``` with the files ```realm-key.pem``` and ```realm-key.pub``` (private and public keys, respectively).
 
-2. Edit the ```configuration.yml``` file and update the ```auth``` settings to use the new keys:
+1. Edit the ```configuration.yml``` file and update the ```auth``` settings to use the new keys:
 
-```console
-auth:
-  public_key_path: /etc/realm/realm-key.pub
-  private_key_path: /etc/realm/realm-key.pem
-```
+    ```console
+    auth:
+      public_key_path: /etc/realm/realm-key.pub
+      private_key_path: /etc/realm/realm-key.pem
+    ```
 
-3. Map the ```config``` directory to ```/etc/realm``` while running the ```realm-generate-admin-token``` command to generate the new admin token.
+1. Map the ```config``` directory to ```/etc/realm``` while running the ```realm-generate-admin-token``` command to generate the new admin token.
 
-```console
-docker run -v $PWD/config:/etc/realm \
-  -v $PWD/data:/var/lib/realm/object-server \
-  robertwtucker/realm-object-server \
-  realm-generate-admin-token -k /etc/realm/realm-key.pem
-```
+    ```console
+    docker run -v $PWD/config:/etc/realm \
+      -v $PWD/data:/var/lib/realm/object-server \
+      robertwtucker/realm-object-server \
+      realm-generate-admin-token -k /etc/realm/realm-key.pem
+    ```
 
 The token file, ```admin_token.base64```, will be written to ```/etc/realm``` (AKA our mapped ```config``` directory). Be sure to map the ```config``` directory in all subsequent launches of the container.
 
